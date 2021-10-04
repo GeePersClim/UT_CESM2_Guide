@@ -26,11 +26,11 @@ https://docs.google.com/document/d/13MmuPwESFoxPoUNs3jCXiy7aBpKamv8P8_z8t7upIAg/
 
 https://docs.google.com/document/d/1lSKuti8y7mn6HJBqIGd6mhlAwRg8r4-V6Y5s1TGTB6I/edit?usp=sharing
 
-4. A bash script example to run CESM2 cases on TACC HPC systems:
+4. A shell script example to run CESM2 cases on TACC HPC systems:
 
 https://docs.google.com/document/d/1y77hFSPUGzaKPhAhnD3c9myAGhLHYFarcW7mF9PdyFI/edit?usp=sharing
 
-5. A bash script example to resubmit a job on TACC HPC systems:
+5. A shell script example to resubmit a job on TACC HPC systems:
 
 https://docs.google.com/document/d/1R1Np6xRXD596c61D2reEaXrUUGbxYAYx9ToAmYwhTFQ/edit?usp=sharing
 
