@@ -453,20 +453,6 @@
     </queues>
   </batch_system>
   
-<!-- 20210610: add the machine specs for frontera for the shared directory under ./work2/. (by Dunyu Liu, dliu@ig.utexas.edu) -->
-  <batch_system MACH="frontera" type="slurm" >
-    <batch_submit>ssh login1.frontera.tacc.utexas.edu cd $CASEROOT ; sbatch</batch_submit>
-    <submit_args>
-      <arg flag="--time" name="$JOB_WALLCLOCK_TIME"/>
-      <arg flag="-p" name="$JOB_QUEUE"/>
-      <arg flag="--account" name="$PROJECT"/>
-    </submit_args>
-    <queues>
-      <queue walltimemax="48:00:00" nodemin="3" nodemax="512" default="true">normal</queue>
-      <queue walltimemax="24:00:00" nodemin="513" nodemax="2048">large</queue>
-      <queue walltimemax="02:00:00" nodemin="1" nodemax="2" >small</queue>
-    </queues>
-  </batch_system>
   
   <batch_system MACH="mira" type="cobalt">
     <queues>
@@ -586,4 +572,33 @@
       <queue walltimemax="00:60:00" nodemin="1" nodemax="50" default="true">default</queue>
     </queues>
   </batch_system>
+  
+<!-- 20210610: add the machine specs for frontera for the shared directory under ./work2/. (by Dunyu Liu, dliu@ig.utexas.edu) -->
+  <batch_system MACH="frontera" type="slurm" >
+    <batch_submit>ssh login1.frontera.tacc.utexas.edu cd $CASEROOT ; sbatch</batch_submit>
+    <submit_args>
+      <arg flag="--time" name="$JOB_WALLCLOCK_TIME"/>
+      <arg flag="-p" name="$JOB_QUEUE"/>
+      <arg flag="--account" name="$PROJECT"/>
+    </submit_args>
+    <queues>
+      <queue walltimemax="48:00:00" nodemin="3" nodemax="512" default="true">normal</queue>
+      <queue walltimemax="24:00:00" nodemin="513" nodemax="2048">large</queue>
+      <queue walltimemax="02:00:00" nodemin="1" nodemax="2" >small</queue>
+    </queues>
+  </batch_system>
+
+<!-- 20211102: add the machine specs for lonestar6 for the shared directory under ./work2/. (by Dunyu Liu, dliu@ig.utexas.edu) -->
+  <batch_system MACH="ls6" type="slurm" >
+    <batch_submit>ssh login1.ls6.tacc.utexas.edu cd $CASEROOT ; sbatch</batch_submit>
+    <submit_args>
+      <arg flag="--time" name="$JOB_WALLCLOCK_TIME"/>
+      <arg flag="-p" name="$JOB_QUEUE"/>
+      <arg flag="--account" name="$PROJECT"/>
+    </submit_args>
+    <queues>
+      <queue walltimemax="48:00:00" nodemin="1" nodemax="64" default="true">normal</queue>
+      <queue walltimemax="48:00:00" nodemin="65" nodemax="256">large</queue>
+    </queues>
+  </batch_system>  
 </config_batch>

@@ -1177,22 +1177,6 @@ using a fortran linker.
   </SLIBS>
 </compiler>
 
-<!-- 20210610 -->
-<compiler MACH="frontera">
-  <CPPDEFS>
-    <append> -DHAVE_NANOTIME </append>
-  </CPPDEFS>
-  <NETCDF_PATH>$ENV{TACC_NETCDF_DIR}</NETCDF_PATH>
-  <PIO_FILESYSTEM_HINTS>lustre</PIO_FILESYSTEM_HINTS>
-  <PNETCDF_PATH>$ENV{TACC_PNETCDF_DIR}</PNETCDF_PATH>
-  <LDFLAGS>
-    <append> -Wl,-rpath,${NETCDF_PATH}/lib </append>
-  </LDFLAGS>
-  <SLIBS>
-    <append> -L${NETCDF_PATH}/lib -lnetcdff -lnetcdf</append>
-  </SLIBS>
-</compiler>
-
 <compiler MACH="stampede2-skx">
   <CPPDEFS>
     <append> -DHAVE_NANOTIME </append>
@@ -1288,5 +1272,23 @@ using a fortran linker.
     <append># USERDEFINED $SHELL{${NETCDF_PATH}/bin/nc-config --flibs}</append>
   </SLIBS>
 </compiler>
+
+
+<!-- 20211102 for lonestar6 -->
+<compiler MACH="ls6">
+  <CPPDEFS>
+    <append> -DHAVE_NANOTIME </append>
+  </CPPDEFS>
+  <NETCDF_PATH>$ENV{TACC_NETCDF_DIR}</NETCDF_PATH>
+  <PIO_FILESYSTEM_HINTS>lustre</PIO_FILESYSTEM_HINTS>
+  <PNETCDF_PATH>$ENV{TACC_PNETCDF_DIR}</PNETCDF_PATH>
+  <LDFLAGS>
+    <append> -Wl,-rpath,${NETCDF_PATH}/lib </append>
+  </LDFLAGS>
+  <SLIBS>
+    <append> -L${NETCDF_PATH}/lib -lnetcdff -lnetcdf</append>
+  </SLIBS>
+</compiler>
+
 
 </config_compilers>
