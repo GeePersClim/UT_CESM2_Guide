@@ -2558,7 +2558,8 @@ This allows using a different mpirun command to launch unit tests
     <COMPILERS>intel</COMPILERS>
     <MPILIBS>impi</MPILIBS>
     <CIME_OUTPUT_ROOT>$ENV{SCRATCH}/CESM2.1.3</CIME_OUTPUT_ROOT>
-    <DIN_LOC_ROOT>/work2/07931/dunyuliu/group_share/CESM2.1.3/inputdata</DIN_LOC_ROOT>
+    <!--DIN_LOC_ROOT>/work2/07931/dunyuliu/group_share/CESM2.1.3/inputdata</DIN_LOC_ROOT-->
+    <DIN_LOC_ROOT>/work/02503/edwardsj/CESM/inputdata</DIN_LOC_ROOT>
     <DIN_LOC_ROOT_CLMFORC>/work/02503/edwardsj/CESM/inputdata/lmwg</DIN_LOC_ROOT_CLMFORC>
     <DOUT_S_ROOT>$CIME_OUTPUT_ROOT/cesm_archive/$CASE</DOUT_S_ROOT>
     <BASELINE_ROOT>/work/02503/edwardsj/CESM/cesm_baselines</BASELINE_ROOT>
@@ -2603,6 +2604,7 @@ This allows using a different mpirun command to launch unit tests
       <modules mpilib="!mpi-serial">
         <command name="load">pnetcdf/1.12.2</command>
 	<command name="load">parallel-netcdf/4.6.2</command>
+	<command name="load">phdf5/1.10.4</command>
       </modules>
     </module_system>
   </machine>
