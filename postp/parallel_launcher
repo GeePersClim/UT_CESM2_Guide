@@ -1,0 +1,6 @@
+./post_proc_cesm_data_loop.sh 1 28
+./post_proc_cesm_data_loop.sh 29 55
+./post_proc_cesm_data_loop.sh 56 75
+./post_proc_cesm_data_loop.sh 76 80
+./post_proc_cesm_data_loop.sh 81 84
+./post_proc_cesm_data_loop.sh 84 90

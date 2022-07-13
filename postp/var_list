@@ -1,0 +1,56 @@
+atm TS
+atm	LANDFRAC
+atm	U10
+atm	PS
+atm	QREFHT
+atm	TREFHT
+atm	PRECT
+atm	PSL
+atm	ICEFRAC
+atm	TAUX	
+atm	TAUY
+atm	PRECC
+atm	PRECL
+atm	FSDS
+atm	FSDSC
+atm	FSNS
+atm	FSNSC
+atm	FSNT
+atm	FSNTC
+atm	FSNTOA
+atm	FSNTOAC
+atm	FSUTOA
+atm	FLDS
+atm	FLNS
+atm	FLNSC
+atm	FLNT
+atm	FLNTC
+atm	FLUT
+atm	FLUTC
+atm	LHFLX
+atm	QFLX
+atm	SHFLX
+atm	OMEGA	3D
+atm	Z3	3D
+atm	CLDTOT
+atm	CLDHGH
+atm	CLDMED
+atm	CLDLOW
+atm	TGCLDCWP
+atm	TGCLDIWP
+atm	TGCLDLWP
+atm	SNOWHICE
+atm	SNOWHLND
+ocn	MOC
+ocn	TEMP	3D
+ocn	UVEL	3D
+ocn	VVEL	3D
+ocn	WVEL	3D
+ocn	SALT	3D
+ocn	SSH
+ice	aice
+lnd	WT
+lnd	SOILWATER
+lnd	QRUNOFF
+lnd	QOVER
+rof	QCHANR
