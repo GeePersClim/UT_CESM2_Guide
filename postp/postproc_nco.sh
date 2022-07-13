@@ -9,10 +9,11 @@ user="07931/dunyuliu"		# user id on Lonestar6
 comp=$1
 var=$2
 start_yrs=1850			# first $start_yrs years of data to be dropped
-run_yrs=5			# total run years
+run_yrs=1855			# the ending year
 
-archdir="/scratch/${user}/CESM2.1.3/cesm_archive/${sim}/atm/hist" # directory to artchived hist data
-scratchdir="/scratch/${user}/CESM2.1.3/timeseries/${sim}/${comp}"		  # directory for output	
+archdir="/scratch/${user}/CESM2.1.3/cesm_archive/${sim}/${comp}/hist" # directory to artchived hist data
+scratchdir="/scratch/${user}/CESM2.1.3/timeseries/${sim}/${comp}"		  # directory for output
+mkdir -p ${scratchdir}
 #scratchdir = "/scratch/07931/dunyuliu/CESM2.1.3/cesm_archive/${sim}/atm/hist"
 
 # Controlling parameters for functions desired
@@ -35,14 +36,16 @@ if [ $doing_ts == 1 ]; then
   echo "==================="
   echo "Doing initial calculation for time series ..."
 
-  i=1
+  i=${start_yrs}
   while [ $i -le $run_yrs ] 
   do
     if [ $i -lt 10 ]; then
-      year="00$i"
+      year="000$i"
     elif [ $i -lt 100 -a  $i -ge 10 ]; then
+      year="00$i"
+    elif [ $i -lt 1000 -a $i -ge 100 ]; then
       year="0$i"
-    elif [ $i -ge 100 ]; then
+    elif [ $i -ge 1000 ]; then
       year="$i"
     fi
     echo $year
@@ -55,7 +58,7 @@ if [ $doing_ts == 1 ]; then
         month="$j"
       fi
       
-      ncks -O -v ${var} ${archdir}/${sim}.cam.h0.0${year}-${month}.nc ${scratchdir}/${var}_${year}-${month}.nc
+      ncks -O -v ${var} ${archdir}/${sim}.cam.h0.${year}-${month}.nc ${scratchdir}/${var}_${year}-${month}.nc
       
       pathtmp=${scratchdir}/${var}_${year}-${month}.nc
 	  echo $pathtmp" is created ..."
@@ -68,9 +71,9 @@ fi
 # Func2: calculate monthly time series.
 if [ $calc_mon_ts == 1 ]; then
   echo "==================="
-  echo "Calculating montly time series ..."
-  ncrcat -O ${scratchdir}/${var}_???-??.nc ${archdir}/${var}.${sim}.mon.001-${run_yrs}.nc
-  pathtmp=${archdir}/${var}.${sim}.mon.001-${run_yrs}.nc
+  echo "Calculating monthly time series ..."
+  ncrcat -O ${scratchdir}/${var}_????-??.nc ${scratchdir}/${var}.${sim}.mon.${start_yrs}-${run_yrs}.nc
+  pathtmp=${scratchdir}/${var}.${sim}.mon.${start_yrs}-${run_yrs}.nc
   echo $pathtmp" is created ..."
   
 fi
