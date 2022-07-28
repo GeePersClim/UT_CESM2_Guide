@@ -1,0 +1,9 @@
+        clm DEADCROOTC   (time, landunit) ;
+        clm FROOTC   (time, landunit) ;
+        clm LIVECROOTC   (time, landunit) ;
+        clm TOTECOSYSC   (time, landunit) ;
+        clm TOTLITC   (time, landunit) ;
+        clm TOTSOMC   (time, landunit) ;
+        clm TOTSOMC_1m   (time, landunit) ;
+        clm TOTVEGC   (time, landunit) ;
+        clm WOODC   (time, landunit) ;

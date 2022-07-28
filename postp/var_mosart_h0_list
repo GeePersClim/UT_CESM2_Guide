@@ -1,0 +1,6 @@
+        mosart DIRECT_DISCHARGE_TO_OCEAN_ICE   (time, lat, lon) ;
+        mosart DIRECT_DISCHARGE_TO_OCEAN_LIQ   (time, lat, lon) ;
+        mosart RIVER_DISCHARGE_OVER_LAND_ICE   (time, lat, lon) ;
+        mosart RIVER_DISCHARGE_OVER_LAND_LIQ   (time, lat, lon) ;
+        mosart TOTAL_DISCHARGE_TO_OCEAN_ICE   (time, lat, lon) ;
+        mosart TOTAL_DISCHARGE_TO_OCEAN_LIQ   (time, lat, lon) ;

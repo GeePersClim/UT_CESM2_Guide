@@ -1,0 +1,2 @@
+        mosart RIVER_DISCHARGE_OVER_LAND_LIQ   (time, lat, lon) ;
+        mosart TOTAL_DISCHARGE_TO_OCEAN_LIQ   (time, lat, lon) ;

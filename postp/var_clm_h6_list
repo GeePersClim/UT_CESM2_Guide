@@ -1,0 +1,3 @@
+        clm NPP   (time, landunit) ;
+        clm TREFMNAV   (time, landunit) ;
+        clm TREFMXAV   (time, landunit) ;
